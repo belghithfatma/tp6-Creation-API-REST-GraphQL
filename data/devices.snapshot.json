@@ -1,0 +1,18 @@
+[
+  {
+    "id": "5afa9c8f-39f9-4d2e-ab19-00458fd87970",
+    "userId": "3b74b5a2-30ae-4a0f-bd95-903370372e85",
+    "name": "Dell100",
+    "type": "laptop",
+    "serialNumber": "SN-LAPTOP-100",
+    "status": "inactive"
+  },
+  {
+    "id": "c529f04f-fd2c-4ded-adc1-102f9c7131ed",
+    "userId": "604a55b8-a876-4e65-86c3-90326c969e33",
+    "name": "Dell-15",
+    "type": "laptop",
+    "serialNumber": "SN-LAPTOP-001",
+    "status": "active"
+  }
+]

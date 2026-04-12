@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "a6125108-be31-479f-99eb-9ef0711ced20",
+    "name": "GraphQL API Users & Devices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection Postman GraphQL pour le TP6 : users et devices."
+  },
+  "item": [
+    {
+      "name": "vérifier présence des deux users avec GraphQL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query Users {\n  users {\n    id\n    name\n    email\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Créer un utilisateur avec GraphQL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation {\n  addUser(name: \"Amira\", email: \"amira@example.com\", password: \"abc123\") {\n    id\n    name\n    email\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "mise à jour avec GraphQL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation {\n  updateUser(id: \"<id>\", name: \"Amira K.\", email: \"amira.k@example.com\", password: \"xyz789\") {\n    id\n    name\n    email\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "suppression avec GraphQL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation {\n  deleteUser(id: \"<id>\")\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lire les devices avec GraphQL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query Devices {\n  devices {\n    id\n    userId\n    name\n    type\n    serialNumber\n    status\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Modifier un device avec GraphQL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation {\n  updateDevice(\n    id: \"<deviceId>\",\n    name: \"Dell XPS Modifié\",\n    type: \"laptop\",\n    serialNumber: \"SN-LAPTOP-001-UPD\",\n    status: \"maintenance\"\n  ) {\n    id\n    userId\n    name\n    type\n    serialNumber\n    status\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

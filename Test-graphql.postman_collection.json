@@ -1,0 +1,110 @@
+{
+  "info": {
+    "_postman_id": "435124e0-4a1f-4d56-bb0d-f28f14337d75",
+    "name": "Test-graphql",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection Postman GraphQL conforme à la structure affichée dans les captures."
+  },
+  "item": [
+    {
+      "name": "ajouter un utilisateur",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation {\n  addUser(name: \"Amira\", email: \"amira@example.com\", password: \"abc123\") {\n    id\n    name\n    email\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "consulter les utilisateurs",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query Users {\n  users {\n    id\n    name\n    email\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "modifier un user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation {\n  updateUser(id: \"<id>\", name: \"Amira K.\", email: \"amira.k@example.com\", password: \"xyz789\") {\n    id\n    name\n    email\n  }\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "supprimer un user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "mutation DeleteUser {\n  deleteUser(id: \"9b6d244a-5d5a-406a-b36a-5bf512718dd2\")\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/graphql",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

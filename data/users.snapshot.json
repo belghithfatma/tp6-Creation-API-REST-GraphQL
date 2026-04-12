@@ -1,0 +1,14 @@
+[
+  {
+    "id": "3b74b5a2-30ae-4a0f-bd95-903370372e85",
+    "name": "Aymen1",
+    "email": "aymen@example.com",
+    "password": "abc00"
+  },
+  {
+    "id": "604a55b8-a876-4e65-86c3-90326c969e33",
+    "name": "yosra belghith",
+    "email": "yosrabelghith@example.com",
+    "password": "12345678"
+  }
+]
